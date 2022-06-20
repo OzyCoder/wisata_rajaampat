@@ -36,7 +36,7 @@ class MobileDetailScreen extends StatelessWidget {
                           )),
                     ),
                   ),
-                  FavoriteButton()
+                  const FavoriteButton()
                 ],
               ))
             ],

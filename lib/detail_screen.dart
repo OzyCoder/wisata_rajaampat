@@ -1,9 +1,11 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:wisata_rajaampat/model/tourism_place.dart';
 import 'package:wisata_rajaampat/mobile_detail_page.dart';
+import 'package:wisata_rajaampat/web_detail_page.dart';
 
 final buttonFontStyle = GoogleFonts.mukta(
     fontStyle: FontStyle.normal, fontSize: 20, fontWeight: FontWeight.bold);
@@ -25,7 +27,14 @@ class DetailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MobileDetailScreen(tempat: tempat);
+    return LayoutBuilder(
+        builder: (BuildContext context, BoxConstraints constraints) {
+      if (constraints.maxWidth > 800) {
+        return WebDetailScreen(tempat: tempat);
+      } else {
+        return MobileDetailScreen(tempat: tempat);
+      }
+    });
   }
 }
 
@@ -66,21 +75,24 @@ class _BookmarkButtonState extends State<BookmarkButton> {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-        onPressed: () {
-          setState(() {
-            isBookmark = !isBookmark;
-          });
-        },
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(
-              isBookmark ? Icons.bookmark : Icons.bookmark_border,
-            ),
-            Text(isBookmark ? " Bookmarked" : " Bookmark",
-                style: buttonFontStyle),
-          ],
-        ));
+    return Container(
+      width: 300,
+      child: ElevatedButton(
+          onPressed: () {
+            setState(() {
+              isBookmark = !isBookmark;
+            });
+          },
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(
+                isBookmark ? Icons.bookmark : Icons.bookmark_border,
+              ),
+              Text(isBookmark ? " Bookmarked" : " Bookmark",
+                  style: buttonFontStyle),
+            ],
+          )),
+    );
   }
 }
