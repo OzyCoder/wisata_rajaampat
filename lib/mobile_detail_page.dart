@@ -30,7 +30,7 @@ class MobileDetailScreen extends StatelessWidget {
                           onPressed: () {
                             Navigator.pop(context);
                           },
-                          icon: Icon(
+                          icon: const Icon(
                             Icons.arrow_back,
                             color: Colors.white,
                           )),
@@ -42,7 +42,7 @@ class MobileDetailScreen extends StatelessWidget {
             ],
           ),
           Container(
-              margin: EdgeInsets.only(top: 16.0),
+              margin: const EdgeInsets.only(top: 16.0),
               child: Text(tempat.name,
                   textAlign: TextAlign.center,
                   style: GoogleFonts.staatliches(
@@ -51,19 +51,19 @@ class MobileDetailScreen extends StatelessWidget {
                       fontSize: 40,
                       fontWeight: FontWeight.w700))),
           Container(
-            padding: EdgeInsets.only(top: 15, bottom: 15),
+            padding: const EdgeInsets.only(top: 15, bottom: 15),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Card(
                   color: Colors.grey[200],
                   child: Container(
-                    padding: EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(10),
                     child: Column(
                       // ignore: prefer_const_literals_to_create_immutables
                       children: [
-                        Icon(Icons.calendar_month),
-                        SizedBox(
+                        const Icon(Icons.calendar_month),
+                        const SizedBox(
                           height: 10,
                         ),
                         Text(
@@ -77,12 +77,12 @@ class MobileDetailScreen extends StatelessWidget {
                 Card(
                   color: Colors.grey[200],
                   child: Container(
-                    padding: EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(10),
                     child: Column(
                       // ignore: prefer_const_literals_to_create_immutables
                       children: [
-                        Icon(Icons.access_time_filled_rounded),
-                        SizedBox(
+                        const Icon(Icons.access_time_filled_rounded),
+                        const SizedBox(
                           height: 10,
                         ),
                         Text(
@@ -96,12 +96,12 @@ class MobileDetailScreen extends StatelessWidget {
                 Card(
                   color: Colors.grey[200],
                   child: Container(
-                    padding: EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(10),
                     child: Column(
                       // ignore: prefer_const_literals_to_create_immutables
                       children: [
-                        Icon(Icons.monetization_on),
-                        SizedBox(
+                        const Icon(Icons.monetization_on),
+                        const SizedBox(
                           height: 10,
                         ),
                         Text(
@@ -116,7 +116,7 @@ class MobileDetailScreen extends StatelessWidget {
             ),
           ),
           Container(
-            padding: EdgeInsets.all(20),
+            padding: const EdgeInsets.all(20),
             child: Text(tempat.description,
                 textAlign: TextAlign.center, style: muktaFontStyle),
           ),
@@ -136,10 +136,10 @@ class MobileDetailScreen extends StatelessWidget {
             ),
           ),
           Container(
-            margin: EdgeInsets.all(20),
+            margin: const EdgeInsets.all(20),
             width: 50,
             height: 40,
-            child: BookmarkButton(),
+            child: const BookmarkButton(),
           )
         ],
       ),

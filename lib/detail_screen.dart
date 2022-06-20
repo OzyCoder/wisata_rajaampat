@@ -1,7 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:wisata_rajaampat/model/tourism_place.dart';
 import 'package:wisata_rajaampat/mobile_detail_page.dart';

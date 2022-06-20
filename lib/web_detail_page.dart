@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:wisata_rajaampat/model/tourism_place.dart';
@@ -88,13 +86,14 @@ class _WebDetailScreenState extends State<WebDetailScreen> {
                         )
                       ],
                     )),
-                    SizedBox(
+                    const SizedBox(
                       height: 32,
                     ),
                     Expanded(
                         child: Card(
+                      margin: const EdgeInsets.only(left: 10),
                       child: Container(
-                        padding: EdgeInsets.all(16),
+                        padding: const EdgeInsets.all(16),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           children: [
